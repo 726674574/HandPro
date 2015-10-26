@@ -1,0 +1,38 @@
+/*通用*/
+li{display: inline}
+/*通用2种宽度*/
+.covered{width:1440px;}
+.smaller{width: 990px;}
+
+
+/*头部*/
+header{width: 1440px;height: 37px;background-color:#222222 ;}
+.hd_content{width: 990px;height: 37px;margin: 0 auto;}
+.hd_left li{display: inline;line-height: 37px;margin-right: 10px;}
+.hd_left a{color: #a8a8a8;font-size: 12px;}
+.hd_right{width: 397px;height:37px;vertical-align:middle;}
+.hd_span1{color:#38aee5;vertical-align:50%;font-size: 16px;}
+.hd_span2{vertical-align:32%;color:#38aee5;font-size:20px;}
+.hd_con{width: 231px;height: 37px;}
+.hd_info{background-color:#38b89f;width:131px;height: 21px;margin-top: 8px;border-radius: 5px;color: #ffffff;font-size: 12px;}
+.hd_info p{margin:1px 11px;width:100%;height:100%;}
+.hd_info a{color: #ffffff;}
+
+
+/*top*/
+.top{height:75px;background-color:#ffffff;}
+.top_content{margin: 0 auto;height: 75px;overflow: auto; }
+.top_left{width: 360px;height: 45px; font-size:24px; margin-top: 18px; }
+.top_left img{vertical-align:middle;}
+.top_right{width:570px;height: 40px; margin-top: 30px; }
+.top_right a{color: #555555;font-size: 15px;}
+.top_right li {margin-left: 17px;}
+
+/*banana*/
+.banana{height: 590px; overflow: hidden;position:relative; }
+#list{height: 590px; position:absolute;z-index: 1;}
+#list img{float: left; height: 590px; width: 1440px;}
+#buttons{position:absolute;height: 10px;width:100px;z-index:2;  bottom:30px;left:695px;}
+#buttons span{cursor: pointer;float: left;border: 1px solid #fff;width: 10px;height: 10px;border-radius:50%;background:#ffffff;margin-right: 5px; }
+#buttons .on{background:#9ddcff}
+#people img{z-index: 2;position:absolute;top:159px;right: 200px;}

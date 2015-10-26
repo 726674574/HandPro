@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="style/reset.css" >
+    <link type="text/css" rel="stylesheet" href="style/main.css" >
+</head>
+<body>
+<header>
+    <div class="hd_content">
+     <div class="hd_left fl">
+
+             <ul>
+                 <li><a href="#">收藏小牛顿</a></li>
+                 <li><a href="#">关注小牛顿</a></li>
+                 <li><a href="#">我的课程</a></li>
+                 <li><a href="#">科普俱乐部</a></li>
+                 <li><a href="#">小牛顿微店</a></li>
+                 <li><a href="#">客户服务</a></li>
+
+             </ul>
+
+     </div>
+        <div class="hd_right fr">
+            <div class="fl">
+                <img src="images/20150105_02.jpg" alt="">
+                <span class="hd_span1">咨询专线：</span><span class="hd_span2">400-6302212</span>
+            </div>
+
+            <div class="hd_info fr">
+                <p>
+               <a href="#">会员登陆</a>
+               <lable>|</lable>
+                <a href="#">会员注册</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="top covered">
+  <div class="top_content smaller">
+
+      <div class="top_left fl" >
+          <img src="images/logo.jpg">科学启蒙教育领航者
+      </div>
+      <div class="top_right fr">
+          <ul>
+              <li><a href="#">首页</a></li>
+              <li><a href="#">家庭课程</a></li>
+              <li><a href="#">在线课堂</a></li>
+              <li><a href="#">爸爸一小时</a></li>
+              <li><a href="#">科普天地</a></li>
+              <li><a href="#">关于小牛顿</a></li>
+              <li><a href="#">联系我们</a></li>
+          </ul>
+      </div>
+  </div>
+    <div id="people" ><img src="images/people_07.png"></div>
+    <div class="banana covered " >
+
+        <div id="list" style="left: -0px;">
+            <img src="images/banana1.png" alt="1">
+            <img src="images/banana2.png" alt="2">
+            <img src="images/banana3.png" alt="3">
+            <img src="images/banana4.png" alt="3">
+        </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2" ></span>
+            <span index="3" ></span>
+            <span index="4" ></span>
+
+        </div>
+    </div>
+</div>
+
+
+
+<footer>
+
+</footer>
+<script type="text/javascript">
+    window.onload=function(){
+        //var banana=document.getElementById();
+        var list=document.getElementById("list");
+        var buttons=document.getElementById("buttons").getElementsByTagName("span");
+        var index=1;
+        for(var i=0;i<buttons.length;i++)
+        {
+            buttons[i].onclick=function(){
+                var myIndex=parseInt(this.getAttribute("index"));
+                var offset=-1440*(myIndex-index);
+                animate(offset);
+                index=myIndex;
+                showButton();
+                if(index!=1)
+                {
+                    document.getElementById("people").style.display = "none";
+                }
+                else
+                {
+                    document.getElementById("people").style.display = "block";
+                }
+            }
+        }
+        function animate(offset)
+        {
+            var newLeft=parseInt(list.style.left)+offset;
+            list.style.left=newLeft+'px';
+
+        }
+        function showButton(){
+            for(var i=0;i<buttons.length;i++)
+            {
+                if(buttons[i].className=="on")
+                {
+                    buttons[i].className="";
+                    break;
+                }
+            }
+            buttons[index-1].className="on";
+        }
+
+    };
+
+</script>
+</body>
+</html>
